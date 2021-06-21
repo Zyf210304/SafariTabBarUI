@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        // since we need the bottom edge..
+        // were using geomtry reader...
+        
+        GeometryReader { proxy  in
+            Home(proxy: proxy)
+        }
     }
 }
 
